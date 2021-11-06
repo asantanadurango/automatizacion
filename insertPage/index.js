@@ -37,12 +37,8 @@ let processResponse = async (dataProcess) => {
 	console.log('working');
 	console.log(dataProcess);
 	data = dataProcess.formatted; // datos formateados [.........]
-	/*
- data = [{1},{2},{3},{4}] 
- for i = 0
- */
+
 	for (let element of data) {
-		console.log('hula');
 		if (!completeIdsPage.includes(element.DOCUMENTO)) {
 			console.log('Cargando ', element);
 			setearCampos(element);
